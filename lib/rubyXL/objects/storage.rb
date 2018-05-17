@@ -92,6 +92,7 @@ module RubyXL
   end
 
   class ControlPropertiesFile < GenericStorageObject
+    CONTENT_TYPE = 'application/vnd.ms-excel.controlproperties+xml'
     REL_TYPE     = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp'
   end
 
@@ -159,6 +160,16 @@ module RubyXL
   class OLEObjectFile < GenericStorageObject
     CONTENT_TYPE = 'application/vnd.openxmlformats-officedocument.oleObject'
     REL_TYPE     = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject'
+  end
+
+  class QueryTableFile < GenericStorageObject
+    REL_TYPE    = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable'
+    CONTENT_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml'
+  end
+
+  class ConnectionFile < GenericStorageObject
+    REL_TYPE    = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections'
+    CONTENT_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml'
   end
 
   class ActiveX < GenericStorageObject

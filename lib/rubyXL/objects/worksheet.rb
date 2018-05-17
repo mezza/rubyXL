@@ -636,6 +636,8 @@ module RubyXL
     define_relationship(RubyXL::ControlPropertiesFile)
     define_relationship(RubyXL::SlicerFile)
     define_relationship(RubyXL::OLEObjectFile)
+    define_relationship(RubyXL::QueryTableFile)
+    define_relationship(RubyXL::ConnectionFile)
     define_relationship(RubyXL::ActiveX)
 
     define_child_node(RubyXL::WorksheetProperties)
@@ -675,8 +677,8 @@ module RubyXL
     define_child_node(RubyXL::EmbeddedControls)
     define_child_node(RubyXL::WebPublishingItems)
     define_child_node(RubyXL::TableParts)
-    define_child_node(RubyXL::ExtensionStorageArea)
     define_child_node(RubyXL::AlternateContent)
+    define_child_node(RubyXL::ExtensionStorageArea)
     define_element_name 'worksheet'
     set_namespaces('http://schemas.openxmlformats.org/spreadsheetml/2006/main' => nil,
                    'http://schemas.openxmlformats.org/officeDocument/2006/relationships' => 'r',
